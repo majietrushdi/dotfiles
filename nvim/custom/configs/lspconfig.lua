@@ -56,3 +56,9 @@ lspconfig.cssls.setup ({
 
 lspconfig.tailwindcss.setup({})
 
+lspconfig.ruff.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
+})
+

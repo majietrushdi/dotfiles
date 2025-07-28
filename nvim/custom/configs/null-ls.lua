@@ -36,12 +36,12 @@ local opts = {
     null_ls.builtins.diagnostics.mypy.with {
       filetypes = { "python" },
     },
-    null_ls.builtins.diagnostics.ruff.with {
-      filetypes = { "python" },
-    },
-    null_ls.builtins.formatting.ruff.with {
-      filetypes = { "python" },
-    },
+    -- null_ls.builtins.diagnostics.ruff.with {
+    --   filetypes = { "python" },
+    -- },
+    -- null_ls.builtins.formatting.ruff.with {
+    --   filetypes = { "python" },
+    -- },
     null_ls.builtins.formatting.prettierd.with { filetypes = { "html", "css", "php" }},
   },
   on_attach = function (client, bufnr)
