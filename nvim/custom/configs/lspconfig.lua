@@ -61,4 +61,3 @@ lspconfig.ruff.setup({
   capabilities = capabilities,
   filetypes = { "python" },
 })
-

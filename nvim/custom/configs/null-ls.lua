@@ -43,6 +43,7 @@ local opts = {
     --   filetypes = { "python" },
     -- },
     null_ls.builtins.formatting.prettierd.with { filetypes = { "html", "css", "php" }},
+    null_ls.builtins.formatting.google_java_format.with { filetypes = { "java" }},
   },
   on_attach = function (client, bufnr)
     if client.supports_method("textDocument/formatting") then
