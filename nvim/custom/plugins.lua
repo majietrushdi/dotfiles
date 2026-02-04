@@ -79,6 +79,13 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   ft = { "go", "php", "python", "html", "css" },
+  --   opts = function()
+  --     return require "custom.configs.null-ls"
+  --   end,
+  -- },
   {
     "nvimtools/none-ls.nvim",
     lazy = false,
