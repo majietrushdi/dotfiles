@@ -19,6 +19,10 @@ local plugins = {
         "prettierd",
         "css-lsp",
         "tailwindcss-language-server",
+        "jdtls",
+        "java-debug-adapter",
+        "java-test",
+        "google-java-format",
       },
     },
   },
@@ -76,12 +80,24 @@ local plugins = {
     end,
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = { "go", "php", "python", "html", "css" },
+    "nvimtools/none-ls.nvim",
+    lazy = false,
+    version = false,
+    ft = { "go", "php", "python", "html", "css", "java" },
     opts = function()
       return require "custom.configs.null-ls"
     end,
   },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   lazy = false,           -- force eager loading
+  --   branch = "main",        -- use latest fixes
+  --   version = false,        -- disable tag pinning
+  --   ft = { "go", "php", "python", "html", "css" },
+  --   opts = function()
+  --     return require "custom.configs.null-ls"
+  --   end,
+  -- },
   {
     "olexsmir/gopher.nvim",
     ft = "go",
@@ -119,6 +135,17 @@ local plugins = {
       crates.setup(opts)
       crates.show()
     end
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui",
+    },
+    config = function()
+      require "custom.configs.jdtls"
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
